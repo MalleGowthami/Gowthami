@@ -1,0 +1,31 @@
+class Solution {
+    public int minOperations(int[] nums, int k) {
+        boolean allSimilar= true;
+        for(int num : nums)
+        {
+            if(num!=k)
+            {
+                allSimilar= false;
+                break;
+            }
+        }
+        if(allSimilar)
+        {
+            return 0;
+        }
+            
+        Set<Integer> s = new HashSet<>();
+        for(int num : nums)
+        {
+            if(num<k)
+            {
+                return -1;
+            }
+            else if(num>k)
+            {
+                s.add(num);
+            }
+        }
+        return s.size();
+    }
+}
