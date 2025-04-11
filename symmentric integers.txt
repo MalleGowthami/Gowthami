@@ -1,0 +1,27 @@
+class Solution {
+    public int countSymmetricIntegers(int low, int high) {
+        int ans = 0;
+        for(int i=low; i<=high; i++){
+            String num = String.valueOf(i);
+
+            if(num.length() %2 != 0)
+                continue;
+
+            int mid = num.length()/2;
+            int left = 0, right = 0;
+
+            for(int j=0; j<mid; j++){
+                left += num.charAt(j) - '0';
+            }
+
+            for(int j=mid; j<num.length(); j++){
+                right += num.charAt(j) - '0';
+            }
+
+            if(left == right)
+                ans++;
+        }
+     
+        return ans;
+    }
+}
