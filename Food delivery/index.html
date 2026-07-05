@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorDash — Premium Food Delivery | Order Delicious Meals Online</title>
+    <meta name="description" content="FlavorDash delivers your favorite meals from the best local restaurants. Fast delivery, fresh food, and exclusive deals. Order now!">
+    <meta name="keywords" content="food delivery, online food order, restaurant delivery, fast food, meals">
+    <meta name="author" content="FlavorDash">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+    <!-- ===== HEADER / NAVIGATION ===== -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#top" class="logo">
+                <span class="logo-icon">🍽️</span>
+                Flavor<span>Dash</span>
+            </a>
+
+            <!-- CSS-only mobile menu toggle -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <!-- Overlay for mobile menu -->
+            <label for="menu-toggle" class="nav-overlay"></label>
+
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#top" class="active">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#restaurants">Restaurants</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="nav-cart" aria-label="Shopping cart">
+                        🛒
+                        <span class="cart-badge">3</span>
+                    </a>
+                    <a href="#" class="btn btn-primary btn-sm">Sign In</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">🔥 #1 Food Delivery App</span>
+
+                <h1 class="hero-title">
+                    Delicious Food,<br>
+                    Delivered <span class="highlight">Fast</span>
+                </h1>
+
+                <p class="hero-description">
+                    Order from 10,000+ top-rated restaurants and get your favorite meals 
+                    delivered to your doorstep in minutes. Fresh, hot, and always on time.
+                </p>
+
+                <!-- Search Bar -->
+                <div class="hero-search">
+                    <span class="search-icon">📍</span>
+                    <input type="text" id="address-input" placeholder="Enter your delivery address...">
+                    <a href="#menu" class="btn btn-primary">Find Food</a>
+                </div>
+
+                <!-- Stats -->
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="stat-value">10K+</div>
+                        <div class="stat-label">Restaurants</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-value">50K+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-value">4.9 ★</div>
+                        <div class="stat-label">App Rating</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image with Floating Cards -->
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="images/hero-burger.png" alt="Delicious gourmet burger with fresh ingredients">
+                </div>
+
+                <!-- Floating Info Cards -->
+                <div class="floating-card card-1">
+                    <span class="float-icon">⏱️</span>
+                    <div>
+                        <div class="float-text">Fast Delivery</div>
+                        <div class="float-sub">Under 30 min</div>
+                    </div>
+                </div>
+
+                <div class="floating-card card-2">
+                    <span class="float-icon">⭐</span>
+                    <div>
+                        <div class="float-text">4.9 Rating</div>
+                        <div class="float-sub">2M+ reviews</div>
+                    </div>
+                </div>
+
+                <div class="floating-card card-3">
+                    <span class="float-icon">🎉</span>
+                    <div>
+                        <div class="float-text">50% OFF</div>
+                        <div class="float-sub">First order</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRUSTED PARTNERS ===== -->
+    <section class="partners">
+        <div class="container">
+            <p class="partners-label">Trusted by top restaurants worldwide</p>
+            <div class="partners-grid">
+                <div class="partner-item"><span class="p-icon">🍔</span> Burger Kingdom</div>
+                <div class="partner-item"><span class="p-icon">🍕</span> Pizza Palace</div>
+                <div class="partner-item"><span class="p-icon">🍣</span> Sakura Sushi</div>
+                <div class="partner-item"><span class="p-icon">🌮</span> Taco Fiesta</div>
+                <div class="partner-item"><span class="p-icon">🍰</span> Sweet Tooth</div>
+                <div class="partner-item"><span class="p-icon">🍜</span> Golden Wok</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CATEGORIES SECTION ===== -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Categories</span>
+                <h2 class="section-title">Explore by <span class="highlight">Cuisine</span></h2>
+                <p class="section-subtitle">From classic comfort food to exotic flavors — find exactly what your taste buds are craving</p>
+            </div>
+
+            <div class="category-grid">
+                <div class="category-card" id="cat-pizza">
+                    <span class="category-icon">🍕</span>
+                    <div class="category-name">Pizza</div>
+                    <div class="category-count">120+ options</div>
+                </div>
+                <div class="category-card" id="cat-burger">
+                    <span class="category-icon">🍔</span>
+                    <div class="category-name">Burgers</div>
+                    <div class="category-count">85+ options</div>
+                </div>
+                <div class="category-card" id="cat-sushi">
+                    <span class="category-icon">🍣</span>
+                    <div class="category-name">Sushi</div>
+                    <div class="category-count">60+ options</div>
+                </div>
+                <div class="category-card" id="cat-asian">
+                    <span class="category-icon">🍜</span>
+                    <div class="category-name">Asian</div>
+                    <div class="category-count">95+ options</div>
+                </div>
+                <div class="category-card" id="cat-indian">
+                    <span class="category-icon">🍛</span>
+                    <div class="category-name">Indian</div>
+                    <div class="category-count">70+ options</div>
+                </div>
+                <div class="category-card" id="cat-mexican">
+                    <span class="category-icon">🌮</span>
+                    <div class="category-name">Mexican</div>
+                    <div class="category-count">55+ options</div>
+                </div>
+                <div class="category-card" id="cat-dessert">
+                    <span class="category-icon">🍰</span>
+                    <div class="category-name">Desserts</div>
+                    <div class="category-count">100+ options</div>
+                </div>
+                <div class="category-card" id="cat-drinks">
+                    <span class="category-icon">🥤</span>
+                    <div class="category-name">Drinks</div>
+                    <div class="category-count">80+ options</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== POPULAR DISHES SECTION ===== -->
+    <section class="popular-dishes" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Popular</span>
+                <h2 class="section-title">Most Loved <span class="highlight">Dishes</span></h2>
+                <p class="section-subtitle">Hand-picked favorites that our customers order again and again</p>
+            </div>
+
+            <div class="dishes-grid">
+                <!-- Dish 1 - Real Image -->
+                <article class="dish-card" id="dish-burger">
+                    <div class="dish-image-emoji bg-burger">
+                        <span class="dish-badge popular">🔥 Popular</span>
+                        <span class="dish-wishlist">♡</span>
+                        <span class="emoji-icon">🍔</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-restaurant">Burger Kingdom</div>
+                        <h3 class="dish-name">Classic Smash Burger</h3>
+                        <div class="dish-meta">
+                            <span>⭐ 4.9</span>
+                            <span>🕐 20 min</span>
+                            <span>🚚 Free</span>
+                        </div>
+                        <div class="dish-footer">
+                            <div class="dish-price">$12.99</div>
+                            <button class="btn-add-cart" aria-label="Add to cart">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 2 - Pizza with real image -->
+                <article class="dish-card" id="dish-pizza">
+                    <div class="dish-image">
+                        <span class="dish-badge new">✨ New</span>
+                        <span class="dish-wishlist">♡</span>
+                        <img src="images/pizza-dish.png" alt="Assorted pizza slices with various toppings">
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-restaurant">Pizza Palace</div>
+                        <h3 class="dish-name">Margherita Supreme</h3>
+                        <div class="dish-meta">
+                            <span>⭐ 4.8</span>
+                            <span>🕐 25 min</span>
+                            <span>🚚 $2.99</span>
+                        </div>
+                        <div class="dish-footer">
+                            <div class="dish-price">$14.99</div>
+                            <button class="btn-add-cart" aria-label="Add to cart">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 3 - Sushi -->
+                <article class="dish-card" id="dish-sushi">
+                    <div class="dish-image-emoji bg-sushi">
+                        <span class="dish-badge popular">🔥 Popular</span>
+                        <span class="dish-wishlist">♡</span>
+                        <span class="emoji-icon">🍣</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-restaurant">Sakura Sushi</div>
+                        <h3 class="dish-name">Dragon Roll Platter</h3>
+                        <div class="dish-meta">
+                            <span>⭐ 4.9</span>
+                            <span>🕐 30 min</span>
+                            <span>🚚 Free</span>
+                        </div>
+                        <div class="dish-footer">
+                            <div class="dish-price">$18.99</div>
+                            <button class="btn-add-cart" aria-label="Add to cart">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 4 - Indian -->
+                <article class="dish-card" id="dish-butter-chicken">
+                    <div class="dish-image-emoji bg-indian">
+                        <span class="dish-badge sale">💎 Premium</span>
+                        <span class="dish-wishlist">♡</span>
+                        <span class="emoji-icon">🍛</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-restaurant">Spice Garden</div>
+                        <h3 class="dish-name">Butter Chicken Deluxe</h3>
+                        <div class="dish-meta">
+                            <span>⭐ 4.7</span>
+                            <span>🕐 35 min</span>
+                            <span>🚚 $1.99</span>
+                        </div>
+                        <div class="dish-footer">
+                            <div class="dish-price">$16.99 <span class="old-price">$19.99</span></div>
+                            <button class="btn-add-cart" aria-label="Add to cart">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 5 - Salad -->
+                <article class="dish-card" id="dish-salad">
+                    <div class="dish-image-emoji bg-salad">
+                        <span class="dish-badge new">✨ Healthy</span>
+                        <span class="dish-wishlist">♡</span>
+                        <span class="emoji-icon">🥗</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-restaurant">Green Bowl Co.</div>
+                        <h3 class="dish-name">Caesar Salad Supreme</h3>
+                        <div class="dish-meta">
+                            <span>⭐ 4.6</span>
+                            <span>🕐 15 min</span>
+                            <span>🚚 Free</span>
+                        </div>
+                        <div class="dish-footer">
+                            <div class="dish-price">$10.99</div>
+                            <button class="btn-add-cart" aria-label="Add to cart">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 6 - Dessert -->
+                <article class="dish-card" id="dish-cake">
+                    <div class="dish-image-emoji bg-dessert">
+                        <span class="dish-badge popular">🔥 Trending</span>
+                        <span class="dish-wishlist">♡</span>
+                        <span class="emoji-icon">🍫</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-restaurant">Sweet Tooth Bakery</div>
+                        <h3 class="dish-name">Chocolate Lava Cake</h3>
+                        <div class="dish-meta">
+                            <span>⭐ 4.9</span>
+                            <span>🕐 20 min</span>
+                            <span>🚚 $1.49</span>
+                        </div>
+                        <div class="dish-footer">
+                            <div class="dish-price">$8.99</div>
+                            <button class="btn-add-cart" aria-label="Add to cart">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 7 - Noodles -->
+                <article class="dish-card" id="dish-noodles">
+                    <div class="dish-image-emoji bg-noodles">
+                        <span class="dish-badge new">✨ New</span>
+                        <span class="dish-wishlist">♡</span>
+                        <span class="emoji-icon">🍜</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-restaurant">Golden Wok</div>
+                        <h3 class="dish-name">Pad Thai Noodles</h3>
+                        <div class="dish-meta">
+                            <span>⭐ 4.7</span>
+                            <span>🕐 25 min</span>
+                            <span>🚚 $2.49</span>
+                        </div>
+                        <div class="dish-footer">
+                            <div class="dish-price">$13.99</div>
+                            <button class="btn-add-cart" aria-label="Add to cart">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dish 8 - Bowl -->
+                <article class="dish-card" id="dish-bowl">
+                    <div class="dish-image-emoji bg-bowl">
+                        <span class="dish-badge sale">💎 Chef's Pick</span>
+                        <span class="dish-wishlist">♡</span>
+                        <span class="emoji-icon">🫐</span>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-restaurant">Aloha Bowls</div>
+                        <h3 class="dish-name">Açaí Power Bowl</h3>
+                        <div class="dish-meta">
+                            <span>⭐ 4.8</span>
+                            <span>🕐 10 min</span>
+                            <span>🚚 Free</span>
+                        </div>
+                        <div class="dish-footer">
+                            <div class="dish-price">$11.99 <span class="old-price">$14.99</span></div>
+                            <button class="btn-add-cart" aria-label="Add to cart">+</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Simple</span>
+                <h2 class="section-title">How It <span class="highlight">Works</span></h2>
+                <p class="section-subtitle">Get your favorite food delivered in just 3 simple steps</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">📍</div>
+                    <span class="step-label">Step 01</span>
+                    <h3 class="step-title">Choose Your Location</h3>
+                    <p class="step-description">Enter your delivery address and discover restaurants near you with real-time availability.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">🍽️</div>
+                    <span class="step-label">Step 02</span>
+                    <h3 class="step-title">Pick Your Meal</h3>
+                    <p class="step-description">Browse curated menus, read reviews, and customize your order exactly how you like it.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">🚀</div>
+                    <span class="step-label">Step 03</span>
+                    <h3 class="step-title">Fast Delivery</h3>
+                    <p class="step-description">Sit back and relax! Track your order in real-time as it arrives at your doorstep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SPECIAL OFFERS ===== -->
+    <section class="offers" id="offers">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Deals</span>
+                <h2 class="section-title">Today's <span class="highlight">Special Offers</span></h2>
+                <p class="section-subtitle">Exclusive deals and discounts you won't find anywhere else</p>
+            </div>
+
+            <div class="offers-grid">
+                <div class="offer-card offer-primary">
+                    <div class="offer-discount">50% OFF</div>
+                    <h3 class="offer-title">First Order Bonus</h3>
+                    <p class="offer-text">Get 50% off on your first order! Maximum discount up to $15. Valid on all restaurants.</p>
+                    <span class="offer-code">WELCOME50</span>
+                    <span class="offer-emoji">🎁</span>
+                </div>
+
+                <div class="offer-card offer-cool">
+                    <div class="offer-discount">FREE</div>
+                    <h3 class="offer-title">Free Delivery Week</h3>
+                    <p class="offer-text">Enjoy free delivery on all orders above $20 this entire week. No code needed!</p>
+                    <span class="offer-code">FREEDEL</span>
+                    <span class="offer-emoji">🚚</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TOP RESTAURANTS ===== -->
+    <section class="restaurants" id="restaurants">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Top Rated</span>
+                <h2 class="section-title">Featured <span class="highlight">Restaurants</span></h2>
+                <p class="section-subtitle">Discover the highest-rated restaurants handpicked by our food experts</p>
+            </div>
+
+            <div class="restaurant-grid">
+                <!-- Restaurant 1 -->
+                <article class="restaurant-card" id="rest-burger-kingdom">
+                    <div class="restaurant-cover cover-burger">
+                        <span class="cover-emoji">🍔</span>
+                        <span class="restaurant-featured-badge">⭐ Featured</span>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Burger Kingdom</h3>
+                        <p class="restaurant-cuisine">American • Fast Food • Grill</p>
+                        <div class="restaurant-stats">
+                            <span class="rating">⭐ 4.8</span>
+                            <span>🕐 20-30 min</span>
+                            <span>🚚 Free delivery</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Restaurant 2 -->
+                <article class="restaurant-card" id="rest-pizza-palace">
+                    <div class="restaurant-cover cover-pizza">
+                        <span class="cover-emoji">🍕</span>
+                        <span class="restaurant-featured-badge">⭐ Featured</span>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Pizza Palace</h3>
+                        <p class="restaurant-cuisine">Italian • Pizza • Pasta</p>
+                        <div class="restaurant-stats">
+                            <span class="rating">⭐ 4.7</span>
+                            <span>🕐 25-35 min</span>
+                            <span>🚚 $2.99</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Restaurant 3 -->
+                <article class="restaurant-card" id="rest-sakura-sushi">
+                    <div class="restaurant-cover cover-sushi">
+                        <span class="cover-emoji">🍣</span>
+                        <span class="restaurant-featured-badge">👑 Premium</span>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Sakura Sushi</h3>
+                        <p class="restaurant-cuisine">Japanese • Sushi • Ramen</p>
+                        <div class="restaurant-stats">
+                            <span class="rating">⭐ 4.9</span>
+                            <span>🕐 30-40 min</span>
+                            <span>🚚 Free delivery</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Restaurant 4 -->
+                <article class="restaurant-card" id="rest-spice-garden">
+                    <div class="restaurant-cover cover-indian">
+                        <span class="cover-emoji">🍛</span>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Spice Garden</h3>
+                        <p class="restaurant-cuisine">Indian • Curry • Tandoori</p>
+                        <div class="restaurant-stats">
+                            <span class="rating">⭐ 4.6</span>
+                            <span>🕐 30-45 min</span>
+                            <span>🚚 $1.99</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Restaurant 5 -->
+                <article class="restaurant-card" id="rest-taco-fiesta">
+                    <div class="restaurant-cover cover-mexican">
+                        <span class="cover-emoji">🌮</span>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Taco Fiesta</h3>
+                        <p class="restaurant-cuisine">Mexican • Tacos • Burritos</p>
+                        <div class="restaurant-stats">
+                            <span class="rating">⭐ 4.5</span>
+                            <span>🕐 15-25 min</span>
+                            <span>🚚 $1.49</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Restaurant 6 -->
+                <article class="restaurant-card" id="rest-sweet-tooth">
+                    <div class="restaurant-cover cover-dessert">
+                        <span class="cover-emoji">🍰</span>
+                        <span class="restaurant-featured-badge">💖 Loved</span>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3 class="restaurant-name">Sweet Tooth Bakery</h3>
+                        <p class="restaurant-cuisine">Desserts • Cakes • Ice Cream</p>
+                        <div class="restaurant-stats">
+                            <span class="rating">⭐ 4.8</span>
+                            <span>🕐 20-30 min</span>
+                            <span>🚚 Free delivery</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Reviews</span>
+                <h2 class="section-title">What Our Customers <span class="highlight">Say</span></h2>
+                <p class="section-subtitle">Real stories from real food lovers who trust FlavorDash every day</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card" id="review-1">
+                    <div class="testimonial-stars star-rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "FlavorDash completely changed how I order food. The delivery is incredibly fast, and the food 
+                        always arrives hot and fresh. I've tried dozens of delivery apps, and this one is hands down the best!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar avatar-1">SM</div>
+                        <div>
+                            <div class="testimonial-name">Sarah Mitchell</div>
+                            <div class="testimonial-role">Regular Customer • 150+ orders</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" id="review-2">
+                    <div class="testimonial-stars star-rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "The variety of restaurants available is amazing. From sushi to tacos, everything is just a tap away. 
+                        Plus, the exclusive deals save me so much money every month. Absolutely love it!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar avatar-2">JK</div>
+                        <div>
+                            <div class="testimonial-name">James Kim</div>
+                            <div class="testimonial-role">Food Enthusiast • 200+ orders</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" id="review-3">
+                    <div class="testimonial-stars star-rating">★★★★★</div>
+                    <p class="testimonial-text">
+                        "As a busy professional, FlavorDash is a lifesaver. The real-time tracking feature gives me peace 
+                        of mind, and the customer support is exceptional. I recommend it to everyone I know!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar avatar-3">PR</div>
+                        <div>
+                            <div class="testimonial-name">Priya Ramirez</div>
+                            <div class="testimonial-role">Premium Member • 300+ orders</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA / NEWSLETTER ===== -->
+    <section class="cta-section" id="subscribe">
+        <div class="container">
+            <div class="cta-card">
+                <span class="cta-icon">📱</span>
+                <h2 class="cta-title">Get Exclusive Deals & Updates</h2>
+                <p class="cta-text">
+                    Subscribe to our newsletter and never miss a deal. Get weekly offers, new restaurant alerts, and more!
+                </p>
+                <form class="cta-form" action="#" method="POST">
+                    <input type="email" id="email-subscribe" placeholder="Enter your email address..." required>
+                    <button type="submit" class="btn-cta">Subscribe</button>
+                </form>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <span class="check-icon">✓</span>
+                        Weekly Deals
+                    </div>
+                    <div class="cta-feature">
+                        <span class="check-icon">✓</span>
+                        No Spam
+                    </div>
+                    <div class="cta-feature">
+                        <span class="check-icon">✓</span>
+                        Unsubscribe Anytime
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <a href="#top" class="logo">
+                        <span class="logo-icon">🍽️</span>
+                        Flavor<span>Dash</span>
+                    </a>
+                    <p class="footer-description">
+                        FlavorDash delivers happiness to your doorstep. We connect you with the best local restaurants 
+                        for a seamless food ordering experience.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#restaurants">Restaurants</a></li>
+                        <li><a href="#offers">Special Offers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Partner with Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>123 Foodie Street, Flavor City, FC 10001</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>hello@flavordash.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+1 (800) FLAVOR-1</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <span>24/7 Customer Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 FlavorDash. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#top" class="scroll-top" aria-label="Scroll to top">↑</a>
+
+</body>
+</html>
